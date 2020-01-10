@@ -1,3 +1,31 @@
 // Place all the styles related to the index controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+.a { 
+   position: absolute; 
+   top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+h1 { font-family: Satisfy; font-size: 49px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 53.9px; }
+
+.b { 
+   position: absolute; 
+   top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+p { color: #390F02; font-family: 'Droid serif', serif; font-size: 36px; font-weight: 400; font-style: italic; line-height: 44px; margin: 0 0 12px; text-align: center; }
+
+.c { 
+   position: absolute; 
+   top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}

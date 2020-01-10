@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html> 
-<body class="jumbotron text-center">
+<body >
     
-   
-        <h1>JuliShop</h1>
-        <p class="lead text-muted">La tienda de mascotas más grande
-del país. </p>
+   <div class="image">
 
-<div>
+<img src="https://siboneycubancuisine.com/image/30394-full_cute-dogs-full-screen-wallpaper-photos-hd-desktop-background.jpg" style="max-width: 100%;max-height: 100%"/>
+
+</div>
+
+<div class="a">
+<h1>JuliShop</h1>
+</div>
+
+<div class="b">
+<p class="lead">La tienda de mascotas más grande
+del país. </p>
+</div>
+
+<div class="c">
   <% if signed_in? %>
     <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"btn btn-primary my-2" %>
   <% else %>
@@ -15,4 +25,8 @@ del país. </p>
     <%= link_to "Ingresar", new_user_session_path, class:"btn btn-primary my-2" %>
   <% end %>
 </div>
+</div>
+</body>
+
+</html>
 
