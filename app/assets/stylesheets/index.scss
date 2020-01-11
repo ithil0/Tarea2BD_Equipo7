@@ -5,7 +5,7 @@
   opacity: 0.5;
   min-height: 100%;
   min-width: 1024px;
-  width: 100%;
+
   height: auto;
   position: fixed;
   top: 0;
@@ -14,8 +14,8 @@
 
 .icon {
   position: absolute;
-
-  top: 20%;
+  opacity: 0.7;
+  top: 17%;
  left: 50%;
  transform: translate(-50%, -50%);
   background: transparent;
@@ -23,7 +23,7 @@
 
 .a {
    position: absolute;
-   top: 35%;
+   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -32,8 +32,27 @@ h1 { font-family: Satisfy; font-size: 49px; font-style: normal; font-variant: no
 
 .b {
    position: absolute;
-   top: 45%;
+   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 p { color: #390F02; font-family: 'Droid serif', serif; font-size: 36px; font-weight: 400; font-style: italic; line-height: 44px; margin: 0 0 12px; text-align: center; }
+
+.d {
+   position: absolute;
+   top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 { font-family: Satisfy; font-size: 36px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 53.9px; }
+
+.container {
+   position: absolute;
+   top: 90%;
+   left: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+}

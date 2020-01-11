@@ -16,8 +16,8 @@
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <a class="dropdown-item" href="users/sign_in">Usuario</a>
-        <a class="dropdown-item" href="#">Trabajador</a>
-        <a class="dropdown-item" href="#">Administrador</a>
+        <a class="dropdown-item" href="employees/sign_in">Trabajador</a>
+        <a class="dropdown-item" href="admins/sign_in">Administrador</a>
       </div>
     </li>
 
@@ -28,13 +28,13 @@
 
    <div class="image">
 
-<img src="https://cdn.wallpapersafari.com/32/78/dTuctf.jpg" style="max-width: 100%;max-height: 100%"/>
+<img src=<%= asset_path( 'wallpaper.jpg' ) %> style="max-width: 100%"/>
 
 </div>
 
 <div class="icon">
 
-<img src="https://i.dlpng.com/static/png/486726_preview.png" style="max-width: 128px"/>
+<img src=<%= asset_path( 'icon.png' ) %> style="max-width: 128px"/>
 
 </div>
 
@@ -47,7 +47,57 @@
 del país. </p>
 </div>
 
+<div class="d">
+<h1>Productos destacados</h1>
+</div>
 
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Producto 1</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$29.000 </h1>
+        <img
+                src="https://tiendapet03.akamaized.net/assets/uploads/productos/7a59d-brit-care-adut-medium_thumbs.jpg"
+                style="width: 150px;height: 150px"/>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Más info</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Producto 2</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$2.000</h1>
+        <img
+                src="https://image.dhgate.com/0x0s/f2-albu-g8-M00-32-E3-rBVaVFy1RzyAVRBhAAFeyKy0mJc402.jpg/500pcs-m-s-nuevo-de-la-cuerda-del-perro-la.jpg"
+                style="width: 150px;height: 150px"/>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Más info</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Producto 3</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$2.900</h1>
+        <img
+                src="https://images-na.ssl-images-amazon.com/images/I/51RaeWwrF0L._SX355_.jpg"
+                style="width: 150px;height: 150px"/>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Más info</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class= "link">
+  <% if signed_in? %>
+    <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"btn btn-primary my-2" %>
+
+  <% end %>
+</div>
 
 </body>
 
