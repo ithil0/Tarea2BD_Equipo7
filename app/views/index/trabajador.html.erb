@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+
+<h1>Hola trabajador</h1>
+
+<div>
+  <% if signed_in? %>
+    <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"btn btn-primary my-2" %>
+
+  <% end %>
+</div>
