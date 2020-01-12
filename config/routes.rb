@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users, path: 'users'
   devise_for :employees, path: 'employees'
   devise_for :admins, path: 'admins'
-  devise_for :users, path: 'users'
+  
 
   get '/trabajador' => 'index#trabajador'
   get '/usuario' => 'index#usuario'
