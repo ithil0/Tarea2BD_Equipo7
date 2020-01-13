@@ -11,7 +11,78 @@
 
 .x {
    position: absolute;
-   top: 50%;
+   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.calugas {
+    top: 60%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    max-width: 1200px !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+ direction: ltr;
+ transform: translate(-50%, -50%);
+}
+.caluga-colores {
+
+    border-radius: 2px;
+    width: 275px;
+    height: 225px;
+    margin: 5px 10px;
+    padding: 0px !important;
+    float: left;
+}
+
+.calugas .caluga-colores .in {
+    border: 2px dotted
+    #FFF;
+    width: 269px;
+    height: 219px;
+    margin: 3px 0px 0px 3px;
+    border-radius: 3px;
+}
+.calugas .caluga-colores .ico {
+    text-align: center;
+    margin-top: 50px;
+}
+.calugas .caluga-colores.tienda {
+    background:
+    #35C3C1;
+}
+
+.calugas .caluga-colores.peluqueria {
+    background:
+    #DF5767;
+}
+
+.calugas .caluga-colores.locales {
+    background:
+    #E9CB31;
+}
+
+.calugas .caluga-colores.frecuente {
+    background:
+    #9DBF49;
+}
+.tiendas {
+  font-family: 'Nunito', sans-serif !important;
+  margin: 0.67em 0;
+  font-style: normal;
+  padding: 0;
+direction: ltr;
+font-size: 16px;
+color:
+#FFF;
+line-height: 1em;
+text-align: center;
+
+text-transform: uppercase;
 }

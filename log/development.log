@@ -14478,3 +14478,2258 @@ Processing by IndexController#home as HTML
 Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 6697)
 
 
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:39:29 -0300
+  [1m[35m (44.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 2133.1ms | Allocations: 1341303)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2166ms (Views: 2152.0ms | ActiveRecord: 0.0ms | Allocations: 1349375)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:39:33 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 613)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 54.3ms | Allocations: 5379)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 302ms (Views: 70.8ms | ActiveRecord: 202.8ms | Allocations: 21451)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:39:39 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"2E7P1sWcOg6BEPFJQwZXXKHuvmciHtjvDZw4n3WyPjPCWZeyU2CRHs78q+ITjKUTX2qZFjZ6U7ljlM4osQHOdA==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 246ms (ActiveRecord: 0.8ms | Allocations: 5682)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 18:39:40 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/usuario.html.erb:26
+  Rendered index/usuario.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.8ms | Allocations: 6794)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:39:42 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:43:33 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:43:37 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 13.3ms | Allocations: 2423)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.8ms | Allocations: 8831)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:43:40 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Zm6YSbOZYrPk7d4TS6QIP0wqyfsL+NLTVKj8oE5j+pyBlzTos5k/OoWQffYoCUEsMRDs8RyqXxFPmgyGxQFigQ=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 77ms (ActiveRecord: 0.7ms | Allocations: 5095)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:43:40 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1343)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 6707)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:43:42 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.8ms | Allocations: 2538)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.0ms | Allocations: 9630)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:43:47 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZZlzGBZzGczeFOJBDEZ4iNoY90bHt7fWo1jFl8ChkRiN9oOY/CagYUvv5947tC3O3j0Iq0rVbff/C/WjP6t42w==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 170ms (ActiveRecord: 0.7ms | Allocations: 4212)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 18:43:47 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/usuario.html.erb:26
+  Rendered index/usuario.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1159)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 25.2ms | ActiveRecord: 1.0ms | Allocations: 6778)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:45:16 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 35.4ms | Allocations: 10419)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 86.1ms | ActiveRecord: 4.1ms | Allocations: 17525)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:45:17 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9+xqKOrRNuDv93U6iZXzRhxQasmMi2eji3ajbPOgnJ+5IFdpsdIg9oXBdJm54fS/Npuzn8R/HOkH3P4VLdWqSw=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.1ms | Allocations: 2478)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:45:17 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1342)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 6704)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:45:20 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 527)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2587)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.0ms | Allocations: 9642)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:45:26 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"dhggWMjabUf4tH0epzferp8VhTEpX6kPaNpVFhHA+i/yyJBgWiROYK5SprEtf/l/kTJU1n6VSbdsGa9f/rWsDg==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 180ms (ActiveRecord: 1.3ms | Allocations: 4225)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 18:45:27 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/usuario.html.erb:26
+  Rendered index/usuario.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1159)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 1.2ms | Allocations: 6780)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:45:29 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+[Devise] Could not find devise mapping for path "/users/sign_out".
+This may happen for two reasons:
+
+1) You forgot to wrap your route inside the scope block. For example:
+
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+
+   @request.env["devise.mapping"] = Devise.mappings[:user]
+
+
+Completed 404 Not Found in 9ms (ActiveRecord: 2.5ms | Allocations: 2066)
+
+
+  
+AbstractController::ActionNotFound (Could not find devise mapping for path "/users/sign_out".
+This may happen for two reasons:
+
+1) You forgot to wrap your route inside the scope block. For example:
+
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+
+   @request.env["devise.mapping"] = Devise.mappings[:user]
+
+):
+  
+devise (4.7.1) app/controllers/devise_controller.rb:90:in `unknown_action!'
+devise (4.7.1) app/controllers/devise_controller.rb:65:in `assert_is_devise_resource!'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:201:in `block (2 levels) in halting'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:202:in `block in halting'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.2.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:46:52 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 38.1ms | Allocations: 10113)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 46.2ms | ActiveRecord: 4.2ms | Allocations: 16340)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:46:54 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"byP9Ua70R2+i/ASE/1xLI4lCBpx5NLdqVN0HPWJz7akQ5RjVQwsiUWmHfmzsS9FMP1WJEaxuK/RWp20eWtaMpw=="}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 1.7ms | Allocations: 2479)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:46:55 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1341)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 6709)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:46:56 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1743)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 7543)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:47:01 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"sd81EZOnZlLdOPCis0BC2ZKpdkJc2RE0b8R0T/Ogo8TJWXMI9maFz0CMvl+kxnF6RqtnHFgVlLOFDuvBFUgeNA==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 168ms (ActiveRecord: 0.8ms | Allocations: 2763)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 18:47:02 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/usuario.html.erb:26
+  Rendered index/usuario.html.erb within layouts/application (Duration: 4.9ms | Allocations: 992)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.9ms | Allocations: 6486)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:47:06 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:48:42 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2098)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.7ms | Allocations: 7479)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:48:44 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BMFoN+4MOfg4fZZVc2OM1umhGeTtEiXD79ZWkzweFpr49e4EtBAPN9FTBqEPrUxcTTK7qUfzBiR3Tz4VBlXaYQ=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.7ms | Allocations: 2219)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:48:44 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1327)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 6693)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:48:46 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1677)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 7297)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:48:51 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"24F3DqfmRjEn8hYo5FM371AEuUAX5SYBlkrIus66a9gks8vTMQiBu1qHHuJmBDryNSJtlBUbuOkBitkPg/jnhg==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 177ms (ActiveRecord: 1.2ms | Allocations: 2745)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 18:48:51 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/usuario.html.erb:26
+  Rendered index/usuario.html.erb within layouts/application (Duration: 4.7ms | Allocations: 992)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.8ms | Allocations: 6474)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:48:54 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:49:32 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:49:35 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 42.4ms | Allocations: 10113)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 51.6ms | ActiveRecord: 4.8ms | Allocations: 16391)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:49:37 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Oboj4ETgDkZneN6U5p0qsY5xY8y2AfhRYeVYHJ8cs+Awv+Cm/E5mjgEBN88cZwrUe5XeEdGmuKlx2ZHfMK6tqQ=="}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 1.4ms | Allocations: 2493)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:49:37 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1341)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.0ms | Allocations: 6707)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:49:39 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 1743)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.0ms | Allocations: 7532)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:49:44 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"wh0sdH6MA6uNjBf6vZP7xYr2u6IR3TMFOfRZtANuqKctNG2EmpZDtcoRsBe0uMf8+Wva2U0+BuCN5WtZTqTpOA==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 168ms (ActiveRecord: 0.8ms | Allocations: 2766)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 18:49:45 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/usuario.html.erb:26
+  Rendered index/usuario.html.erb within layouts/application (Duration: 4.2ms | Allocations: 992)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 1.0ms | Allocations: 6474)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:49:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:49:51 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2098)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.9ms | Allocations: 7476)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:50:21 -0300
+  
+SyntaxError (/home/king/Documentos/Tarea2BD_Equipo7/config/routes.rb:13: syntax error, unexpected end-of-input, expecting end):
+  
+config/routes.rb:13: syntax error, unexpected end-of-input, expecting end
+config/routes.rb:13: syntax error, unexpected end-of-input, expecting end
+config/routes.rb:13: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:50:47 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 36.7ms | Allocations: 10113)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 46.2ms | ActiveRecord: 3.5ms | Allocations: 16374)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:50:49 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TT1j/F0H8C6mkGUpIiQnaVZq1VHB2kTT5LCwYXf+rYlDac609x1SjhXNASfiIhf/CBSUppWAD54oevub98VilA=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 1.1ms | Allocations: 2484)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:50:49 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1341)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 6707)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:50:51 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1743)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.0ms | Allocations: 7520)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:50:56 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"bJ944z6BUskFPi5Wt5XQKgHY5sdju+8fqLl7WxA7xl0oQTntVnqziBce7ETlHv/fnoG8Dw1vE75FY8nCdHFKOA==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 170ms (ActiveRecord: 1.3ms | Allocations: 2758)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 18:50:56 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/usuario.html.erb:26
+  Rendered index/usuario.html.erb within layouts/application (Duration: 4.8ms | Allocations: 992)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.9ms | Allocations: 6472)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:50:59 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:51:14 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2097)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.7ms | Allocations: 7496)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:51:16 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"B/gIkePyXjHX9cnY9/3cp0SOt5hRKjKcwfGc6+3ulzj2lSOeyg4mahklgH5X3BBfZE8rgegk2gRskBk0AoJPVg=="}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms | Allocations: 2204)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:51:16 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 46.9ms | Allocations: 1327)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 61.3ms | ActiveRecord: 0.0ms | Allocations: 6697)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:51:18 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.1ms | Allocations: 1677)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.0ms | Allocations: 7299)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:51:22 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"cHpOfZGOP9jI78e8rh3ExMFqqWgzpGWOayzNKz10VVQ9UZtq/XXV8zPM7OtEwQX9OZxnhfB3l6ucgR5AwjY1ow==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 176ms (ActiveRecord: 0.9ms | Allocations: 2749)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 18:51:22 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/usuario.html.erb:26
+  Rendered index/usuario.html.erb within layouts/application (Duration: 4.6ms | Allocations: 992)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 1.2ms | Allocations: 6468)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:51:25 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:53:02 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 39.1ms | Allocations: 10112)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 46.1ms | ActiveRecord: 5.3ms | Allocations: 16317)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:53:04 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"j7YEV3RnMLzWN8xbev7ckMqIsla/Gm/t9xynvvaIWygJOGx5mLZPtktw7FF9LzEwPLAILXpz7Mo7VKVTkhVsWw=="}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.5ms | Allocations: 2485)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:53:04 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1341)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.0ms | Allocations: 6717)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:53:06 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1743)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 7550)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:53:10 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"8OkF/1OvdH+NWA7SbDr0PObDZ/dE2GYFP0RNlNbFUxqiPC2CbzAOW83zuxENqU5cPVuAkbxNbuMv3vSPTUqDpQ==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 177ms (ActiveRecord: 0.8ms | Allocations: 2769)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 18:53:10 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/usuario.html.erb:26
+  Rendered index/usuario.html.erb within layouts/application (Duration: 4.8ms | Allocations: 992)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.8ms | Allocations: 6482)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:53:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:56:04 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 33.5ms | Allocations: 10375)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 43.2ms | ActiveRecord: 4.0ms | Allocations: 17484)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:56:06 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bNrk8y7yui6maLi0Fxo6OJwf/fKyix6qrhYeNuJrCjl6V8RYzqA0xKUUn7lqx77/U88u4KLo8uBFbdvkSM3CxA=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.8ms | Allocations: 2477)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:56:07 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1343)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 6704)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:56:09 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 527)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 2586)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.0ms | Allocations: 9655)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:56:13 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"b69xGos/l7Vf2X5KK1UvNkU6z9oUChgZk7+V8q2n4sJPS7jga+P6XudHjtoTOYd5O2kiysiziepAxPehWy2E/w==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 175ms (ActiveRecord: 0.8ms | Allocations: 4224)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 18:56:14 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/usuario.html.erb:26
+  Rendered index/usuario.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1159)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.8ms | Allocations: 6784)
+
+
+Started GET "/usuario/sign_out" for 127.0.0.1 at 2020-01-12 18:56:16 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/usuario/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/usuario/sign_out" for 127.0.0.1 at 2020-01-12 18:56:35 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/usuario/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/usuario/sign_out" for 127.0.0.1 at 2020-01-12 18:57:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/usuario/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:57:38 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 12.2ms | Allocations: 2367)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 1.5ms | Allocations: 8779)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:57:39 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Uv0cK98jmnEGyAEgOjq3n/o3SjXRJpzo44tXYFfA42c76ZVmdL8lFVun3NidWmZH24vqXLFkDHCWSFwOfQYMlQ=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.8ms | Allocations: 2218)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 18:57:40 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1328)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 6693)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:57:42 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 523)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.7ms | Allocations: 2526)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.0ms | Allocations: 9589)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 18:57:47 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"WrIK7lUO5yccQ9d48QjgrgZO0HOfWvOQ6/1hhaRfbF2LjGoaGnK1Bq7F2IVc9DWoeT6AtutPH6EsVeSABayROw==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 164ms (ActiveRecord: 0.8ms | Allocations: 4204)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 18:57:47 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/usuario.html.erb:26
+  Rendered index/usuario.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 1.0ms | Allocations: 6775)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2020-01-12 18:57:50 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 19:34:44 -0300
+  [1m[35m (10.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to 
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 32.4ms | Allocations: 12940)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+actionpack (6.0.2.1) lib/action_controller/metal/redirecting.rb:59:in `redirect_to'
+actionpack (6.0.2.1) lib/action_controller/metal/flash.rb:58:in `redirect_to'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:64:in `block in redirect_to'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:63:in `redirect_to'
+turbolinks (5.2.1) lib/turbolinks/redirection.rb:12:in `redirect_to'
+devise (4.7.1) app/controllers/devise_controller.rb:116:in `require_no_authentication'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:183:in `block in halting_and_conditional'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.2.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 19:38:22 -0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to 
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.0ms | Allocations: 2221)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+actionpack (6.0.2.1) lib/action_controller/metal/redirecting.rb:59:in `redirect_to'
+actionpack (6.0.2.1) lib/action_controller/metal/flash.rb:58:in `redirect_to'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:64:in `block in redirect_to'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:63:in `redirect_to'
+turbolinks (5.2.1) lib/turbolinks/redirection.rb:12:in `redirect_to'
+devise (4.7.1) app/controllers/devise_controller.rb:116:in `require_no_authentication'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:183:in `block in halting_and_conditional'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.2.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-01-12 19:38:25 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 2472.9ms | Allocations: 1335292)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2505ms (Views: 2502.0ms | ActiveRecord: 0.6ms | Allocations: 1342271)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 19:38:29 -0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 19:39:03 -0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-01-12 19:39:07 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2122)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 72.4ms | ActiveRecord: 2.5ms | Allocations: 7504)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 19:39:08 -0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-01-12 19:44:51 -0300
+  [1m[35m (33.1ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/home.html.erb:96
+  Rendered index/home.html.erb within layouts/application (Duration: 13.7ms | Allocations: 2368)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 22.7ms | ActiveRecord: 5.8ms | Allocations: 8791)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 19:44:53 -0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/users/sign_out"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 19:45:36 -0300
+  [1m[35m (34.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RVVIHoO3AIRNwWuU6lt+6FOTPDqsr1TtLMhGkEg3JR7QNyVyHwFMKNACJN+hMB7On53kNO0XfAOu+Dd+mLKPzQ=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 61ms (ActiveRecord: 9.0ms | Allocations: 13806)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 19:45:36 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 2308.3ms | Allocations: 1334617)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2334ms (Views: 2330.9ms | ActiveRecord: 0.0ms | Allocations: 1342204)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 19:45:42 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 613)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 50.4ms | Allocations: 6221)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 74ms (Views: 71.6ms | ActiveRecord: 0.0ms | Allocations: 13208)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 19:45:48 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"R4WZB5iitZ8Y3W6sxlRRTWDPvOfg1K1Z6g3E2loPdW/3BHrnJkZY9aJD6Qq/Dm0ajABv+1T+SJlVW+x1gzxXWw==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 266ms (ActiveRecord: 1.0ms | Allocations: 5222)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 19:45:48 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/index/usuario.html.erb:21
+  Rendered index/usuario.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1223)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.8ms | Allocations: 6863)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 19:45:52 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LjfQXnVzch5ERnB2DNZdrcewiDqVHNWkF4c2mQHUN0hHN74U4iDQ9twFOUmLenZYJwHNt6/VfqSXJhqQDst41g=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.9ms | Allocations: 2214)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 19:45:52 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1325)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 6699)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 19:46:42 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 523)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2525)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 0.0ms | Allocations: 9957)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 19:47:15 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1685)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 78.2ms | ActiveRecord: 0.0ms | Allocations: 12748)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 19:47:24 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 7642)
+
+
+Started GET "/employees/sign_in" for 127.0.0.1 at 2020-01-12 19:47:26 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 204)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1910)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 21.1ms | ActiveRecord: 2.6ms | Allocations: 13112)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 19:47:44 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 523)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2524)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.0ms | Allocations: 9924)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 19:47:49 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"zSD/Vr2pb8998YerwLb7XJU7yhO3e7MNtb5ul/zUt3x1fDlp7++yoi+wCxBfVypqmO9mr+HeVw2Q9humJruKHQ==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 175ms (ActiveRecord: 0.9ms | Allocations: 4176)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 19:47:49 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 1.0ms | Allocations: 186)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 6350)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 19:47:52 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kbpHnHtNILNscyQj5xPfIgsTmDY41JmRDDKoXWriqMqCouExVmkpUBN9ApnsPjL/B6Y3XpO1B9xl1BZzt55btw=="}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 1.2ms | Allocations: 2213)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 19:47:52 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.0ms | Allocations: 7096)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 19:49:08 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 523)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2529)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.0ms | Allocations: 9950)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 19:49:13 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Kp3ruI3s4JWo+Ide5d5cFs45JbXnArcrb+2LNlvcn8tyaJ/Yo7H+0RRD4eh52bqd0t9tjj/Mgpt8cOhGP35KrQ==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 171ms (ActiveRecord: 0.8ms | Allocations: 4208)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 19:49:13 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.7ms | Allocations: 816)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 6861)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 19:49:17 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"++SoN2+fK3Rlu5PBze7TZv4QXv2P2A5bEIesFvDn0k6gCoPhAGjKA6pe4yhgLfEAojXDoW4SPtrEjG+iHO70yQ=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.1ms | Allocations: 2223)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 19:49:17 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 7098)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 21:30:17 -0300
+  [1m[35m (262.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (33.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 5114.7ms | Allocations: 1344968)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5366ms (Views: 5287.1ms | ActiveRecord: 0.0ms | Allocations: 1353991)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 21:30:32 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.8ms | Allocations: 613)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 66.8ms | Allocations: 5382)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 363ms (Views: 90.6ms | ActiveRecord: 181.2ms | Allocations: 21505)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 21:30:39 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"OGX1ap9M9xIFB6wHY1bZNPEMf3B19quALCMqRei3uq0KscMbj+sXpo4Ux3M3vISygt9Da404fx0fp+N8JfZ06Q==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (146.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 492ms (ActiveRecord: 146.7ms | Allocations: 5673)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 21:30:39 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 25.3ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.0ms | Allocations: 6385)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 21:36:49 -0300
+  [1m[35m (63.7ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.3ms | Allocations: 680)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms | Allocations: 11128)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 21:37:27 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.0ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 116ms (Views: 114.6ms | ActiveRecord: 0.0ms | Allocations: 11997)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 21:39:09 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.0ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms | Allocations: 11133)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 21:41:00 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.5ms | Allocations: 680)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.0ms | Allocations: 12003)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 21:41:28 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.9ms | Allocations: 848)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 7279)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 21:43:05 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.1ms | Allocations: 684)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms | Allocations: 11131)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 21:44:23 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.7ms | Allocations: 842)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 7267)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 21:54:46 -0300
+  [1m[35m (66.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.1ms | Allocations: 684)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.0ms | Allocations: 11145)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 21:55:26 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.3ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 0.0ms | Allocations: 11567)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 21:57:13 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.6ms | Allocations: 680)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms | Allocations: 12005)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:01:32 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.0ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 75.1ms | ActiveRecord: 0.0ms | Allocations: 11565)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:07:49 -0300
+  [1m[35m (27.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.2ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.0ms | Allocations: 11561)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:09:24 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.5ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms | Allocations: 12433)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:10:08 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.4ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.0ms | Allocations: 11959)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:12:34 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 1.9ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.0ms | Allocations: 12399)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 22:12:39 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pb5j/B0tRePZ6kpKEYr4o1F5gNlU4FPh0boohtFQhVgMfzPbuJLyjkflC6WozkyJNCQkxnIGSiP8YkFjP40VyQ=="}
+  [1m[36mUser Load (213.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 270ms (ActiveRecord: 213.8ms | Allocations: 5059)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 22:12:40 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1317)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.0ms | Allocations: 6833)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 22:15:15 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1109)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 110ms (Views: 108.6ms | ActiveRecord: 0.0ms | Allocations: 12783)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 22:17:01 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1107)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms | Allocations: 13233)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 22:17:07 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1107)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms | Allocations: 6484)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 22:17:58 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1109)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 6520)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 22:21:00 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.0ms | Allocations: 14105)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 22:21:04 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 523)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 2525)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 0.0ms | Allocations: 9602)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 22:21:09 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"e56ZSm3V9cKsrEKFBOWCMUUBCwhTRcWQvqRTLvteWju0a1voaaLXT7W7RGJM/aLMfZbE59WfftPBoQvCh0OgMg==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (308.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 477ms (ActiveRecord: 308.9ms | Allocations: 4193)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:21:10 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 4.1ms | Allocations: 843)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 6366)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:25:04 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.8ms | Allocations: 844)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 7259)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:25:59 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.1ms | Allocations: 684)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.0ms | Allocations: 11960)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:27:14 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 1.9ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.0ms | Allocations: 12390)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:27:44 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 1.8ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.0ms | Allocations: 12862)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:28:59 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.0ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.0ms | Allocations: 11125)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:29:54 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.9ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.0ms | Allocations: 12391)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:31:32 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.7ms | Allocations: 849)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms | Allocations: 7295)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:32:43 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 1.9ms | Allocations: 684)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.0ms | Allocations: 11958)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:34:08 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.6ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 66.9ms | ActiveRecord: 0.0ms | Allocations: 12404)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:34:12 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.0ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 6082)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:34:28 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 1.8ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.0ms | Allocations: 11996)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:34:57 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.8ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.0ms | Allocations: 11560)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:35:49 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.5ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.0ms | Allocations: 11947)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:37:48 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.9ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.0ms | Allocations: 11923)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:38:07 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 8.6ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.0ms | Allocations: 11982)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:38:29 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.0ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 6115)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:40:03 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 1.9ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms | Allocations: 12000)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:41:09 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 1.9ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.0ms | Allocations: 12874)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:41:42 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.1ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms | Allocations: 11560)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:42:02 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.0ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms | Allocations: 12420)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:42:34 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 1.8ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.0ms | Allocations: 11945)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:42:55 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.2ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.0ms | Allocations: 12420)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:43:22 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.0ms | Allocations: 8092)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 22:44:28 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ADtApwjAl/tj7BZYzRiYOowpyNHrYRK3RpcyTDIj/Oaib4vn+fCIAXUbUH8z2uw9ZeyFMHs2Q2d4tYVPnHDqxg=="}
+  [1m[36mUser Load (83.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 91ms (ActiveRecord: 83.0ms | Allocations: 2208)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 22:44:28 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1314)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 6818)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 22:44:33 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.7ms | Allocations: 523)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2529)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.0ms | Allocations: 9581)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 22:44:38 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"mV+WEBeia8NDm9Uv44LlCg5lKtzUYozGxn43QYhhQLk7IHIkKwKBNL3v0JXjOnDhLvGpEOg9Dkd5d6sld0ylaA==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 174ms (ActiveRecord: 0.8ms | Allocations: 4204)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:44:38 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1438)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 6824)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:45:13 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1433)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.0ms | Allocations: 13551)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-01-12 22:45:17 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xlvfxi23tPobsFHj8MLiH7nYTTcdweA6eiEEohVMcSXhdYIBFqvXGTFOFt07730sSSYoLC0o+SO+x1XJHiKF2Q=="}
+  [1m[36mUser Load (139.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 147ms (ActiveRecord: 139.2ms | Allocations: 2195)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-12 22:45:18 -0300
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  Rendered index/home.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1107)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 6491)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-12 22:45:20 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1681)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms | Allocations: 7317)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-01-12 22:45:25 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"N5I1AnW0cuPtAEqIXlpjDwMmWnVz7Jdhwqmom6ZejQazeJvBYQi9h4O3i9nY4etF0Hv6XQ4O2k62NGo5pOmFFw==", "user"=>{"email"=>"a@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/usuario
+Completed 302 Found in 166ms (ActiveRecord: 1.0ms | Allocations: 2753)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:45:25 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1433)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 6815)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:47:29 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 7809)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:54:15 -0300
+  [1m[35m (35.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1177)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.0ms | Allocations: 12929)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:56:06 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.0ms | Allocations: 12456)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:56:39 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms | Allocations: 12450)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:56:48 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 53.2ms | ActiveRecord: 0.0ms | Allocations: 6589)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:56:49 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1174)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.0ms | Allocations: 6543)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:56:49 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1174)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms | Allocations: 6553)
+
+
+Started GET "/usuario" for 127.0.0.1 at 2020-01-12 22:56:50 -0300
+Processing by IndexController#usuario as HTML
+  Rendering index/usuario.html.erb within layouts/application
+  Rendered index/usuario.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1174)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 6557)
+
+

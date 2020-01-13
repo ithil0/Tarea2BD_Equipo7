@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   devise_for :users, path: 'users'
   devise_for :employees, path: 'employees'
   devise_for :admins, path: 'admins'
-  
+
+#do get 'users/sign_out' => 'devise/sessions#destroy' end
 
   get '/trabajador' => 'index#trabajador'
   get '/usuario' => 'index#usuario'

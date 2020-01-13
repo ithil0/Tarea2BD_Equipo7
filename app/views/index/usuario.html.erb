@@ -1,10 +1,57 @@
 <!DOCTYPE html>
+<html>
+<body >
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"sr-only" %></a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+  <div class="image">
+    <img src=<%= asset_path( 'wallpaper.jpg' ) %> style="max-width: 100%"/>
+  </div>
+  <div class="icon">
 
-<h1>Hola</h1>
+  <img src=<%= asset_path( 'icon.png' ) %> style="max-width: 128px"/>
 
-<div>
-  <% if signed_in? %>
-    <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"btn btn-primary my-2" %>
+  </div>
 
-  <% end %>
-</div>
+  <div class="a">
+  <h1>JuliShop</h1>
+  </div>
+
+  <div class="calugas">
+  		  <a class="caluga-colores tienda" href="#">
+  				<div class="in">
+  					<p class="ico"><img src="https://assets.jumpseller.com/store/pethappy/themes/25289/i-tienda.png?1578495855" alt="Tienda Online" width="56" height="56"></p>
+  					<h1 class="tiendas">Tienda Online</h1>
+  					<h2 class="tiendas">Catálogo de productos</h2>
+  				</div>
+  			</a>
+  		  <a class="caluga-colores peluqueria" href="#">
+  				<div class="in">
+  					<p class="ico"><img src="https://assets.jumpseller.com/store/pethappy/themes/25289/i-veterinaria.png?1578495855" alt="Veterinaria" width="56" height="56"></p>
+  					<h1 class="tiendas">Veterinaria</h1>
+  				  <h2 class="tiendas">Consulta veterinaria gratuita</h2>
+  				</div>
+  			</a>
+  		  <a class="caluga-colores locales" href="#">
+  				<div class="in">
+  					<p class="ico"><img src="https://assets.jumpseller.com/store/pethappy/themes/25289/i-peluqueria.png?1578495855" alt="Peluquería" width="56" height="56"></p>
+  					<h1 class="tiendas">Peluquería de mascotas</h1>
+  				</div>
+  			</a>
+  		  <a class="caluga-colores frecuente" href="#">
+  				<div class="in">
+  					<p class="ico"><img src="https://assets.jumpseller.com/store/pethappy/themes/25289/i-locales.png?1578495855" alt="Encuentra nuestros locales" width="56" height="56"></p>
+  					<h1 class="tiendas">Encuentra nuestros<br> locales</h1>
+  				</div>
+  			</a>
+  			<div class="clearboth"></div>
+  		</div>
+
+</body>
+</html>
