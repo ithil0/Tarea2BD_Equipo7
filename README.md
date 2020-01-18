@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Para entrar a la pagina del administrador o trabajador usar la ruta /administrador o /trabajador (no alcanzamos a hacer todas las redirecciones).
 
-Things you may want to cover:
+Los clientes deben registrarse para ver todos los productos disponibles.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Los administradores y trabajadores pueden crear y editar productos y categorías.
