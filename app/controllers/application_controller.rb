@@ -16,7 +16,7 @@ protected
 	elsif resource==@user then
         '/usuario'
         elsif resource==@admin then
-        '/admistrador'
+        '/administrador'
 	end
     	 
 end
@@ -28,7 +28,7 @@ end
 	elsif resource==@user then
         '/usuario'
         elsif resource==@admin then
-        '/adimistrador'
+        '/administrador'
 	end
 end
 
